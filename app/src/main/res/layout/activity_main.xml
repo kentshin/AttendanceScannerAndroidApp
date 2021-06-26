@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo_main"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        app:srcCompat="@drawable/ivolunteer_logo" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/phone_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/cc"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:background="#DCD6D6"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="+63"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/cc"
+                    android:background="#CAA6A6"
+                    android:backgroundTint="#CAA6A6"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:hint="10 Digit Phone Number"
+                    android:inputType="phone"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/otp"
+                android:layout_width="266dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/phone_holder"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+
+                android:background="#CAA6A6"
+                android:backgroundTint="#CAA6A6"
+                android:elevation="3dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:hint="Enter OTP"
+                android:inputType="number"
+                android:textSize="14sp"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="266dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/otp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:elevation="30dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Generate OTP"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#1E9FDA"
+                app:cornerRadius="20dp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="275dp"
+                android:layout_below="@id/welcome_header"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/volunteer_main" />
+
+            <TextView
+                android:id="@+id/welcome_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/welcome_header2"
+                android:layout_marginStart="30dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Volunteer. Help. Give. Have Fun. Level Up."
+                android:textColor="#AA9C9B"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/welcome_header2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:elevation="10dp"
+                android:fontFamily="@font/bungee"
+                android:text="🙋🏽‍♂️LEVEL App "
+                android:textColor="#715654"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

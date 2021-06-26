@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "715749062519",
+    "project_id": "hackathonsample-d9716",
+    "storage_bucket": "hackathonsample-d9716.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715749062519:android:81b2057117294f107d1372",
+        "android_client_info": {
+          "package_name": "com.example.ivolunteerschedscanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715749062519-ee3urpqkk9pdsq9ftopgm15tddhdrju3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ivolunteerschedscanner",
+            "certificate_hash": "f4534c76c91e5afa7169cf9abc566a6dc8bb62dd"
+          }
+        },
+        {
+          "client_id": "715749062519-7a1msj9eo00deg0277857c33pvqphtc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIAm151CjVHAzOBltjeKrnGnWZnAuJj6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715749062519-7a1msj9eo00deg0277857c33pvqphtc8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

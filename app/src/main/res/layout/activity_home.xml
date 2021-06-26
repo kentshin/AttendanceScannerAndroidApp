@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+
+    <ImageView
+        android:id="@+id/logo_main"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        app:srcCompat="@drawable/ivolunteer_logo" />
+
+    <RelativeLayout
+        android:id="@+id/header_card"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/gradient_bg">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/photo_holder"
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+        <RelativeLayout
+            android:id="@+id/detail_holder"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="15dp"
+            android:layout_toRightOf="@id/imageView"
+            android:elevation="10dp"
+            android:minHeight="30dip"
+            android:scaleY="1">
+
+
+            <TextView
+                android:id="@+id/level_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/bungee"
+                android:gravity="center"
+                android:text="LEVEL : "
+                android:textColor="#805987"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/exp_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/level_bar"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/bungee"
+                android:gravity="center"
+                android:text="EXP :"
+                android:textColor="#805987"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/exp_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/level_bar"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/exp_label"
+                android:fontFamily="@font/bungee"
+                android:gravity="center"
+                android:text="50%"
+                android:textColor="#805987"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/hours_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exp_label"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/bungee"
+                android:gravity="center"
+                android:text="HOURS :"
+                android:textColor="#805987"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/level_label"
+                android:fontFamily="@font/bungee"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="#805987"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/exp_label"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/hours_label"
+                android:fontFamily="@font/bungee"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="#805987"
+                android:textSize="18sp" />
+
+            <ProgressBar
+                android:id="@+id/level_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/level"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:drawingCacheQuality="high"
+                android:max="100"
+                android:progress="50"
+                android:progressDrawable="@drawable/progress_design"
+                android:progressTint="#00BCD4" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/imageView"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/bungee"
+            android:gravity="center"
+            android:text="The Nick Name"
+            android:textColor="#19A9BC"
+            android:textColorLink="#FFFFFF"
+            android:textSize="16sp" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            app:srcCompat="@drawable/avatar" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/main_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/photo_holder"
+        android:layout_marginTop="0dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/inner_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/photo_holder"
+                android:padding="5dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/second"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/first"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="10dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/label3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="MY RECORD" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:padding="3dp">
+
+
+                            <ImageView
+                                android:id="@+id/record_list"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/record_list" />
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/first"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/label1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="ATTENDANCE" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true">
+
+
+                            <ImageView
+                                android:id="@+id/time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                app:srcCompat="@drawable/attendance" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/third"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/second"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/label3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="MY PROFILE" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true">
+
+
+                            <ImageView
+                                android:id="@+id/profile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/myaccount" />
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
